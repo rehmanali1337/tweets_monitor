@@ -1,0 +1,51 @@
+{
+    "TWITTER_API_KEY": "4B9mwfjV3uxh",
+    "TWITTER_API_KEY_SECRET": "j7VgS4ty9T5keoSrzT7BzT9irDaQq8xU",
+    "ACCESS_TOKEN": "130447420990jOgE8EGYx8B7uwqmUrcjNU",
+    "ACCESS_TOKEN_SECRET": "iyha3GQrCrFIjlqXFq0f8pe4",
+    "DISCORD_CHANNEL_WEBHOOK": "https://discord.com/api/webhooks-jTPHU9dYX_XbhtGy2cwV2Lr9I-N4KSSO6CVSStkjtwo",
+    "DATABASE_USERNAME": "root",
+    "DATABASE_PASSWORD": "uni",
+    "DATABASE_NAME": "tweetsDB",
+    "TABLE_NAME": "tweets",
+    "MYSQL_SERVER_ADDRESS": "localhost",
+    "SET1": [
+        "Possible",
+        "Potential",
+        "Rumor",
+        "Rumors",
+        "Rumour",
+        "Rumours",
+        "Chatter",
+        "Insiders",
+        "Insider"
+    ],
+    "SET2": [
+        "to Buy",
+        "Purchases",
+        "Purchase",
+        "Purchased",
+        "Merger",
+        "Mergers",
+        "Merged",
+        "Acquired",
+        "Acquire",
+        "Acquires",
+        "Acquisition",
+        "Takeover",
+        "M&A"
+    ],
+    "SET3": [
+        "Inc.",
+        "Inc",
+        "Incorporated",
+        "Company",
+        "Co.",
+        "Co",
+        "Corp",
+        "Corporation",
+        "Ltd.",
+        "Ltd",
+        "Limited"
+    ]
+}

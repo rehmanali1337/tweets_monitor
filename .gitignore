@@ -1,0 +1,4 @@
+.vscode
+__pycache*
+config.json
+tests.py
