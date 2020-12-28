@@ -1,0 +1,3 @@
+[console_scripts]
+tweets_monitor = tweets_monitor.main:main
+
