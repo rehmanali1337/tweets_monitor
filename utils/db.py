@@ -23,12 +23,12 @@ class DB:
                 "port": 3306,
                 'database': self.databaseName
             }
-            try:
-                c = connector.connect(**config)
-                return c
-            except:
-                print("connection error")
-                exit(1)
+            # try:
+            c = connector.connect(**config)
+            return c
+            # except:
+            # print("connection error")
+            # exit(1)
 
         cn = connection()
         cur = cn.cursor()
