@@ -19,7 +19,7 @@ def main():
     monitor = Monitor(tweetsQueue, extendedQueue)
     threading.Thread(target=db.start, name='Database Thread').start()
     threading.Thread(target=monitor.start, name='Monitor Thread').start()
-    for i in range(5):
+    for i in range(50):
         filteringThread = FilterTweets(f'Filter {i}', tweetsQueue, dbQueue, config.get("SET1"),
                                        config.get("SET2"), config.get("SET3"),
                                        config.get("DISCORD_CHANNEL_WEBHOOK"))

@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 from discord import Webhook, AsyncWebhookAdapter, Embed
+from pprint import pprint
 
 
 class FilterTweets:
@@ -23,6 +24,7 @@ class FilterTweets:
             set1Found = False
             set2Found = False
             set3Found = False
+            # pprint(status._json)
             text = status._json['text']
             if status._json['truncated']:
                 print('Truncated tweet found!')
@@ -79,6 +81,8 @@ class FilterTweets:
         embed = Embed(title='New Tweet')
         embed.add_field(
             name='Author', value=status._json['user']['name'], inline=False)
+        embed.add_field(
+            name='Tweet URL', value=f'https://twitter.com/i/web/status/{status._json.get("id")}')
         embed.description = text
         async with aiohttp.ClientSession() as session:
             webhook = Webhook.from_url(
