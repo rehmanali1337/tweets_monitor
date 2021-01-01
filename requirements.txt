@@ -1,4 +1,3 @@
 discord
 mysql-connector-python
 tweepy
-aiiohttp
