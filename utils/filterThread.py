@@ -62,12 +62,21 @@ class FilterTweets:
                     finalList = l.split(' ')
                     words.extend([w for w in finalList])
                 words = list(filter(None, words))
-                return words
+                string = ' '.join(words)
+                words = ''.join(
+                    ch for ch in string if ch.isalnum() or ch == ' ')
+                return [w for w in words.split(' ')]
 
             words = createWords(text)
             for w in words:
+                if me:
+                    print(w)
                 if len(w) <= 4 and len(w) >= 1:
+                    if me:
+                        print('Length match')
                     if w.isupper():
+                        if me:
+                            print("All uper")
                         set3Found = True
             if set1Found and set2Found and set3Found:
                 print('Tweet Matched')
