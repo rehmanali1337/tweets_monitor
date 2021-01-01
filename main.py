@@ -1,11 +1,11 @@
 import asyncio
 import json
 from queue import Queue
-from tweets_monitor.twitter.monitor import Monitor
-from tweets_monitor.utils.db import DB
+from twitter.monitor import Monitor
+from utils.db import DB
 import threading
-from tweets_monitor.utils.filterThread import FilterTweets
-from tweets_monitor.utils.helperThread import Helper
+from utils.filterThread import FilterTweets
+from utils.helperThread import Helper
 import argparse
 
 
@@ -19,7 +19,7 @@ def main():
     monitor = Monitor(tweetsQueue, extendedQueue)
     threading.Thread(target=db.start, name='Database Thread').start()
     threading.Thread(target=monitor.start, name='Monitor Thread').start()
-    for i in range(2000):
+    for i in range(500):
         filteringThread = FilterTweets(f'Filter {i}', tweetsQueue, dbQueue, config.get("SET1"),
                                        config.get("SET2"), config.get("SET3"),
                                        config.get("DISCORD_CHANNEL_WEBHOOK"))
